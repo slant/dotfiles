@@ -1,6 +1,9 @@
-colorscheme desert
+" ----------------------------------------------------------------------------
+" Default
+" ----------------------------------------------------------------------------
+
 set anti
-set lines=999 columns=84
+set lines=60 columns=180
 set guioptions=egmrt
 
 " Command + t to :CommandT
@@ -30,3 +33,24 @@ nmap <d-6> 6gt
 nmap <d-7> 7gt
 nmap <d-8> 8gt
 nmap <d-9> 9gt
+
+
+" ----------------------------------------------------------------------------
+" Solarized
+" ----------------------------------------------------------------------------
+
+syntax enable
+set background=dark
+colorscheme solarized
+call togglebg#map("<F5>")
+
+
+" ----------------------------------------------------------------------------
+" Custom
+" ----------------------------------------------------------------------------
+
+set winminheight=0      " Allow windows to get fully squashed
+
+" Switch between windows, maximizing the current window
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_ 
