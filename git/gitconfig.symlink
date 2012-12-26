@@ -1,6 +1,20 @@
+[hub]
+  protocol = https
 [user]
   name = Ryan L. Cross
   email = rcross@cylence.com
+  helper = osxkeychain
+[github]
+  user = cylence
+[alias]
+  co = checkout
+  st = status --porcelain
+  br = branch
+  com = commit -a -m
+  promote = !$ZSH/bin/git-promote
+  wtf     = !$ZSH/bin/git-wtf
+  rank-contributers = !$ZSH/bin/git-rank-contributers
+  count   = !git shortlog -sn
 [color]
   diff = auto
   status = auto
@@ -18,16 +32,10 @@
   added = yellow
   changed = green
   untracked = cyan
-[alias]
-  co = checkout
-  st = status
-  br = branch
-  com = commit -a -m
-[github]
-  user = cylence
 [core]
   quotepath = false
-  excludesfile = /Users/ryan/.gitignore
+  excludesfile = ~/.gitignore
+  editor = vim
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
@@ -40,5 +48,10 @@
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 [mergetool]
   prompt = false
+  keepBackup = false
 [merge]
   tool = Kaleidoscope
+[apply]
+  whitespace = nowarn
+[help]
+  autocorrect = 1
