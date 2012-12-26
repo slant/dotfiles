@@ -29,10 +29,16 @@
   quotepath = false
   excludesfile = /Users/ryan/.gitignore
 [difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
   prompt = false
 [diff]
   tool = Kaleidoscope
 [push]
-	default = upstream
+  default = upstream
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+[mergetool]
+  prompt = false
+[merge]
+  tool = Kaleidoscope
