@@ -2,10 +2,10 @@
   protocol = https
 [user]
   name = Ryan L. Cross
-  email = rcross@cylence.com
+  email = rcross@gmail.com
   helper = osxkeychain
 [github]
-  user = cylence
+  user = slant
 [alias]
   co = checkout
   st = status --porcelain
@@ -37,20 +37,21 @@
   excludesfile = ~/.gitignore
   editor = vim
 [difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
-  prompt = false
+	prompt = false
 [diff]
-  tool = Kaleidoscope
+	tool = Kaleidoscope
 [push]
   default = upstream
 [mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 [mergetool]
-  prompt = false
+	prompt = false
   keepBackup = false
 [merge]
-  tool = Kaleidoscope
+	tool = Kaleidoscope
 [apply]
   whitespace = nowarn
 [help]
