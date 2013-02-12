@@ -1,3 +1,11 @@
+# Heroku
+alias hs="heroku sudo"
+alias hsa="heroku sudo apps -u $1"
+alias hsc="heroku sudo certs -a $1"
+alias hsd="heroku sudo domains -a $1"
+alias hsi="heroku sudo info -a $1"
+alias hsconf="heroku sudo config -a $1"
+
 # grc overides for ls
 #   Made possible through contributions from generous benefactors like
 #   `brew install coreutils`
